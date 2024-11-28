@@ -36,3 +36,26 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+const {name, role, email, img} = teamMembers
+
+
+function newMemberCard (member) {
+  const row = document.querySelector('.row')
+  row.innerHTML =  `<div class="card">
+                     <div class="img">
+                       <img src="./assets/img/male1.png" alt="male1">
+                     </div>
+                     <div class="name">
+                       <p>Marco Bianchi</p>
+                     </div>
+                     <div class="role">                   
+                       <p>Designer</p>
+                     </div>
+                     <div class="email">
+                       <p>marcobianchi@team.com</p>
+                     </div>
+                   </div>`
+}
+
+
