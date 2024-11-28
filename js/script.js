@@ -37,25 +37,30 @@ const teamMembers = [
   }
 ];
 
-const {name, role, email, img} = teamMembers
+const row = document.querySelector('.row')
 
 
 function newMemberCard (member) {
-  const row = document.querySelector('.row')
-  row.innerHTML =  `<div class="card">
+  const {name, role, email, img} = member
+  return           `<div class="card">
                      <div class="img">
-                       <img src="./assets/img/male1.png" alt="male1">
+                       <img src="${img}" alt="${img}">
                      </div>
                      <div class="name">
-                       <p>Marco Bianchi</p>
+                       <p>${name}</p>
                      </div>
                      <div class="role">                   
-                       <p>Designer</p>
+                       <p>${role}</p>
                      </div>
                      <div class="email">
-                       <p>marcobianchi@team.com</p>
+                       <p>${email}</p>
                      </div>
                    </div>`
 }
 
 
+
+for (let teamMember of teamMembers) {
+  row.innerHTML += newMemberCard(teamMember)
+
+}
