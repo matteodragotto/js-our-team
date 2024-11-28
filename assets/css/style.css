@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  border: 1px solid green;
+  max-width: 98vw;
+  margin: 20px auto;
+}
+
+.row {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.card {
+  display: block;
+  width: calc(100% / 3);
+  padding: 40px;
+  background-color: bisque;
+}
+
+.card .img {
+  overflow: hidden;
+}
+
+.card .img img{
+  width: 100%;
+}
+
+.card .name, .role, .email {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: aliceblue;
+}
