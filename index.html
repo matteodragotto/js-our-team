@@ -40,15 +40,17 @@
 
     <div class="new-member container">
       <div class="row">
-        <form>
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" required>
-          <label for="role">Ruolo</label>
-          <input type="text" id="role" name="role" required>
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" required>
-          <label for="img">Foto</label>
-          <input type="text" id="img" name="img" required>
+        <form class="form">
+          <div class="inputs">            
+            <input type="text" id="name" name="name" placeholder="Nome" required>            
+            <input type="text" id="role" name="role" placeholder="Ruolo" required>           
+            <input type="text" id="email" name="email" placeholder="Email" required>            
+            <input type="text" id="img" name="img" placeholder="Foto" required value="assets/img/george.gif">
+          </div>
+          <div class="buttons">
+            <button type="submit">Invia</button>
+            <button type="reset">Cancella</button>
+          </div>
         </form>
       </div>
     </div>

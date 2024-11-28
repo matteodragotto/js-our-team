@@ -37,8 +37,9 @@ const teamMembers = [
   }
 ];
 
+const form = document.querySelector('.form')
+const inputs = document.querySelectorAll('input')
 const row = document.querySelector('.row')
-
 
 function newMemberCard (member) {
   const {name, role, email, img} = member
@@ -60,9 +61,35 @@ function newMemberCard (member) {
           </div>`
 }
 
-
-
 for (let teamMember of teamMembers) {
   row.innerHTML += newMemberCard(teamMember)
 
 }
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  
+  const newMember = {}
+  for (let input of inputs) {
+    
+    const inputValue = input.value.trim()
+    const inputName = input.name    
+    
+    newMember[inputName] = inputValue
+  }    
+ 
+  teamMembers.push(newMember) 
+  
+
+  row.innerHTML = ''
+
+  for (let teamMember of teamMembers) {
+    row.innerHTML += newMemberCard(teamMember)
+  
+  }
+
+  form.reset()
+})
+
+
+
